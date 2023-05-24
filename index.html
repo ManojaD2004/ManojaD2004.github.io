@@ -1,91 +1,86 @@
 <!DOCTYPE html>
-<html>
-<style>
-#container {
-  width: 400px;
-  height: 400px;
-  position: relative;
-  background: yellow;
-  overflow: hidden;
-}
-.animate {
-  width: 50px;
-  height: 50px;
-  position: absolute;
-  background-color: red;
-  top: 0px;
-  left: 0px;
-}
-</style>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
 <body>
-  <h1>Speed up and Slow down</h1>
-<p><button onclick="my1()">Click Me</button></p> 
-<p><button onclick="my2()">Stop Me</button></p>
+    <div class="wrapper clearfix">
+        <div class="text-heading">
+            <h1 class="text-style">
+                MERCH
+            </h1>
+        </div>
+        <div class="img-container">
+            <img class="img-size" src="./csgo.jpg">
+        </div>
+        <button class="buynow blockdisplay">
+            Join the Mafia
+        </button>
+        <button class="addtocart blockdisplay">
+            Gets Newsletter
+        </button>
+    </div>
 
-<div id ="container">
-  <div class ="animate"></div>
-  <div class ="animate" style="left: 100px;"></div>
-  <div class ="animate" style="top: 100px"></div>
-</div>
-<p id="demo"></p>
-
-<script>
-
-const id = [];
-let ide = null;
-let cc = 0;
- const elem = document.getElementsByClassName("animate");   
- let pos = 1;
- let count = 0;
- let prel = 0;
- let pret = 0;
- 
-function my1() {
-  ide = setInterval(frame, 2);
-  id.push(ide);
-  
-}
-
-function frame() {
-    if (count == 400) {
-    count = 0;
-    elem[0].style.left = -50 + "px";
-    elem[0].style.top = -50 + "px";
-    elem[1].style.left = 50 + "px";
-    elem[1].style.top = -50 + "px";
-    elem[2].style.left = -50 + "px";
-    elem[2].style.top = 50 + "px";  
+    <div class="description">
+        <h2>Mafia Heroes:</h2>
+        <p>
+            Lorem ipsum dolor sit amet, 
+            consectetur adipiscing elit, 
+            sed do eiusmod tempor incididunt
+            ut labore et dolore magna aliqua.
+            Ut enim ad minim veniam, quis 
+            nostrud exercitation ullamco 
+            laboris nisi ut aliquip ex ea 
+            commodo consequat. Duis aute 
+            irure dolor in reprehenderit 
+            in voluptate velit esse cillum 
+            dolore eu fugiat nulla pariatur.
+            Excepteur sint occaecat cupidatat
+            non proident, sunt in culpa qui 
+            officia deserunt mollit anim id 
+            est laborum.
+        </p>
+        <h2>Mafia Villian:</h2>
+        <p>
+            Lorem ipsum dolor sit amet, 
+            consectetur adipiscing elit, 
+            sed do eiusmod tempor incididunt
+            ut labore et dolore magna aliqua.
+            Ut enim ad minim veniam, quis 
+            nostrud exercitation ullamco 
+            laboris nisi ut aliquip ex ea 
+            commodo consequat. Duis aute 
+            irure dolor in reprehenderit 
+            in voluptate velit esse cillum 
+            dolore eu fugiat nulla pariatur.
+            Excepteur sint occaecat cupidatat
+            non proident, sunt in culpa qui 
+            officia deserunt mollit anim id 
+            est laborum.
+        </p>
+        <h2>Join us to fight:</h2>
+        <p>
+            Lorem ipsum dolor sit amet, 
+            consectetur adipiscing elit, 
+            sed do eiusmod tempor incididunt
+            ut labore et dolore magna aliqua.
+            Ut enim ad minim veniam, quis 
+            nostrud exercitation ullamco 
+            laboris nisi ut aliquip ex ea 
+            commodo consequat. Duis aute 
+            irure dolor in reprehenderit 
+            in voluptate velit esse cillum 
+            dolore eu fugiat nulla pariatur.
+            Excepteur sint occaecat cupidatat
+            non proident, sunt in culpa qui 
+            officia deserunt mollit anim id 
+            est laborum.
+        </p>
+    </div>
     
-    } 
-    else { 
-    count++;
-      prel = 0;
-      pret = 0;
-      for ( let i = 0;i < elem.length; i ++) 
-      {
-      prel = elem[i].style.left;
-      pret = elem[i].style.top;
-      prel = prel.toString();
-      pret = pret.toString();
-      document.getElementById("demo").innerHTML = id;
-      elem[i].style.top = pos + Number(pret.replace("px","")) + "px"; 
-      elem[i].style.left = pos + Number(prel.replace("px","")) + "px"; 
-      }
-    }
-  }
-  
-function my2() {
-if (id[cc] == undefined)
-{
-cc = 0;
-}
-else {
-clearInterval(id[0]);
-id.shift();
-document.getElementById("demo").innerHTML = id;
-}
-}
-</script>
-
 </body>
 </html>
