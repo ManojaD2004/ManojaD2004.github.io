@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<style>
+#container {
+  width: 400px;
+  height: 400px;
+  position: relative;
+  background: yellow;
+  overflow: hidden;
+}
+.animate {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  background-color: red;
+  top: 0px;
+  left: 0px;
+}
+</style>
+<body>
+
+<p><button onclick="my1()">Click Me</button></p> 
+<p><button onclick="my2()">Stop Me</button></p>
+
+<div id ="container">
+  <div class ="animate"></div>
+  <div class ="animate" style="left: 100px;"></div>
+  <div class ="animate" style="top: 100px"></div>
+</div>
+<p id="demo"></p>
+
+<script>
+
+const id = [];
+let ide = null;
+let cc = 0;
+ const elem = document.getElementsByClassName("animate");   
+ let pos = 1;
+ let count = 0;
+ let prel = 0;
+ let pret = 0;
+ 
+function my1() {
+  ide = setInterval(frame, 2);
+  id.push(ide);
+  
+}
+
+function frame() {
+    if (count == 400) {
+    count = 0;
+    elem[0].style.left = -50 + "px";
+    elem[0].style.top = -50 + "px";
+    elem[1].style.left = 50 + "px";
+    elem[1].style.top = -50 + "px";
+    elem[2].style.left = -50 + "px";
+    elem[2].style.top = 50 + "px";  
+    
+    } 
+    else { 
+    count++;
+      prel = 0;
+      pret = 0;
+      for ( let i = 0;i < elem.length; i ++) 
+      {
+      prel = elem[i].style.left;
+      pret = elem[i].style.top;
+      prel = prel.toString();
+      pret = pret.toString();
+      document.getElementById("demo").innerHTML = id;
+      elem[i].style.top = pos + Number(pret.replace("px","")) + "px"; 
+      elem[i].style.left = pos + Number(prel.replace("px","")) + "px"; 
+      }
+    }
+  }
+  
+function my2() {
+if (id[cc] == undefined)
+{
+cc = 0;
+}
+else {
+clearInterval(id[0]);
+id.shift();
+document.getElementById("demo").innerHTML = id;
+}
+}
+</script>
+
+</body>
+</html>
