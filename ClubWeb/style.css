@@ -1,0 +1,102 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+}
+
+.header {
+    display: block;
+    background-color: rgba(0, 0, 0);
+    height: 560px;
+    padding-top: 25px;
+    
+}
+
+.logoPic {
+    background-image: url('./Imgs/BullLogo.webp');
+    background-repeat: no-repeat;
+    border: 0px solid rgb(209, 127, 127);
+    background-size: 130%;
+    background-position-x: center;
+    background-position-y: center;
+    filter: invert(100%);
+    height: 350px;
+    width: 350px;
+    margin: auto;
+    
+}
+
+.wobble:hover {
+    animation: wobble 1s ease-in-out infinite;
+  }
+
+  @keyframes wobble {
+    0% { transform: translateX(0%); }
+    15% { transform: translateX(-3%) rotate(-3deg); }
+    30% { transform: translateX(3%) rotate(3deg); }
+    45% { transform: translateX(-3%) rotate(-3deg); }
+    60% { transform: translateX(3%) rotate(3deg); }
+    75% { transform: translateX(-3%) rotate(-3deg); }
+    100% { transform: translateX(0%); }
+  }
+
+.mainTitle {
+    text-align: center;
+    font-family:Arial, Helvetica, sans-serif;
+    letter-spacing: 5px;
+    color: aliceblue;
+    font-size: xx-large;
+    font-weight: bolder;
+    margin-top: -15px;
+}
+
+.bullDash {
+    display: inline-block;
+    position: relative;
+    top: 10px;
+    width: 70px;
+    height: 70px;
+    background-image: url('./Imgs/bullDasing.webp');
+    background-size: 170%;
+    background-position-x: center;
+    background-repeat: no-repeat;
+    border: 0px solid rgb(209, 127, 127);
+}
+
+.hTagline {
+    color: rgb(255, 255, 255);
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: lighter;
+    text-align: center;
+    letter-spacing: 5px;
+}
+
+.regLink {
+    display: block;
+    color: #2997ff;
+    text-align: center;
+    font-family: Arial;
+    letter-spacing: 3px;
+    font-weight: lighter;
+    text-decoration: none;
+}
+
+.regLink:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.section {
+    margin-top: 20px;
+    display: block;
+    background-color: rgba(0, 0, 0);
+    height: 560px;
+    padding-top: 25px;
+}
+
+h1 {
+    color: aliceblue;
+    text-align: center;
+}
