@@ -1,7 +1,21 @@
-const imgSCase = document.getElementById("imgSCase");
 const imgSCaseL = document.getElementById("imgSCaseL");
 const imgSCaseM = document.getElementById("imgSCaseM");
 const imgSCaseR = document.getElementById("imgSCaseR");
+const imgSCButs = document.getElementById("imgSCButtons");
+const imgsButsClearUp= [];
+
+let imgButton = "";
+let groupButton = "";
+
+for (let i = 0; i < 10; i++) {
+    imgButton = '<button data-img-no="' + i;
+    imgButton = imgButton + '"class="circleButton"' + 
+    'onclick="imgButtonChange(this)"></button>';
+    groupButton = groupButton + imgButton;
+    imgButton = "";
+}
+
+imgSCButs.innerHTML = groupButton;
 
 const imgGallery = {0: "gold",
 1: "red",
@@ -51,8 +65,10 @@ let counterR = counter + 1;
     if (counterR === 10){
         counterR = 0;
     }
+
 imgSCaseR.style.backgroundColor = imgGallery[counterR];
 imgSCaseR.innerHTML = imgNoRef[counterR];
+
 
 }
 
@@ -69,3 +85,16 @@ function imgSCaseRFun() {
 }
 
 imgSCaseChange();
+
+function imgButtonChange(selectedButton) {
+    let counterNo = selectedButton.getAttribute("data-img-no");
+    selectedButton.style.backgroundColor = 'rgb(14, 2, 34)';
+    for (let i = 0; i < imgsButsClearUp.length; i++) {
+        imgsButsClearUp[i].style.backgroundColor = 'rgb(122, 66, 212)';
+        imgsButsClearUp.shift();
+    }
+    imgsButsClearUp.push(selectedButton);
+    counter = parseInt(counterNo);
+    imgSCaseChange();
+}
+
