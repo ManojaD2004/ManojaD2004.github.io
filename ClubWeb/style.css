@@ -25,7 +25,10 @@ body {
     height: 350px;
     width: 350px;
     margin: auto;
-    
+}
+
+.logoPic:hover {
+    background-image: url('./Imgs/BullLogoGlow.webp');
 }
 
 .wobble:hover {
@@ -130,20 +133,45 @@ h1, h2 {
     margin-top: 25px;
 }
 
+.sectionEvents {
+    margin-top: 20px;
+    display: block;
+    background-color: rgb(255, 255, 255);
+    height: 560px;
+    padding-top: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow: hidden;
+    color: black; 
+    margin-top: 0px;
+}
+
 .eventsShowCase {
     display: flex;
     border: 1px solid rgb(209, 127, 127);
-    height: 405px;
+    height: 420px;
     width: 1250px;
     margin: auto;
+    flex-wrap: wrap;
+}
 
+.eventsItems {
+    flex-basis: 50%;
+    background-color: darkslategray;
+    border: 1px solid rgb(4, 252, 99);
+    height: 140px;
+    color: antiquewhite;
+}
+
+.eventsItems:hover {
+    color: rgb(27, 31, 56);
+    background-color: rgb(143, 197, 197);
 }
 
 .theMerits {
     margin-top: 20px;
     display: flex;
     background-color: rgb(219, 219, 219);
-    height: 2350px;
+    height: 1770px;
     font-family: Arial, Helvetica, sans-serif;
     overflow: hidden;  
     padding: 15px 0px;
@@ -235,4 +263,43 @@ h1, h2 {
 .circleButton:hover {
     cursor: pointer;
     background-color: rgb(65, 23, 131);
+}
+
+@media only screen and (max-width: 600px) {
+    
+.header {
+    padding-top: 0px;
+}
+.regLinkSecEach {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.imgSec {
+    width:100%
+}
+.eventsShowCase {
+    width: 100%;
+}
+.meritsItems {
+    flex-basis: 96%;
+    margin-top: 15px;
+}
+.buttonsClick {
+    width: 50%;
+}
+
+.theMerits {
+    height: 1750px;
+}
+.eventsShowCase {
+    width: 90%;
+    height: 840px;
+}
+.eventsItems {
+    flex-basis: 100%;
+}
+.sectionEvents {
+    height: 1000px;
+}
+
 }

@@ -10,7 +10,8 @@ let groupButton = "";
 for (let i = 0; i < 10; i++) {
     imgButton = '<button data-img-no="' + i;
     imgButton = imgButton + '"class="circleButton"' + 
-    'onclick="imgButtonChange(this)"></button>';
+    'onclick="imgButtonChange(this)" id="imgSCBut' + i +
+    '"></button>';
     groupButton = groupButton + imgButton;
     imgButton = "";
 }
@@ -39,7 +40,7 @@ const imgNoRef = {0: "0 - zero",
 8: "8 - eight",
 9: "9 - nine"}
 
-let counter = 1
+let counter = 0
 
 function imgSCaseChange() {
 
@@ -49,6 +50,18 @@ function imgSCaseChange() {
     else if (counter === 10) {
         counter = 0;
     }
+
+let chgCurButClr = document.getElementById("imgSCBut" + counter);
+chgCurButClr.style.backgroundColor = 'rgb(14, 2, 34)';
+
+for (let i = 0; i < imgsButsClearUp.length; i++) {
+    imgsButsClearUp[i].style.backgroundColor = '';
+    imgsButsClearUp.shift();
+}
+
+imgsButsClearUp.push(chgCurButClr);
+
+
 
 imgSCaseM.style.backgroundColor = imgGallery[counter];
 imgSCaseM.innerHTML = imgNoRef[counter];
@@ -88,12 +101,9 @@ imgSCaseChange();
 
 function imgButtonChange(selectedButton) {
     let counterNo = selectedButton.getAttribute("data-img-no");
-    selectedButton.style.backgroundColor = 'rgb(14, 2, 34)';
-    for (let i = 0; i < imgsButsClearUp.length; i++) {
-        imgsButsClearUp[i].style.backgroundColor = 'rgb(122, 66, 212)';
-        imgsButsClearUp.shift();
+    if (parseInt(counterNo) === counter) {
+        return;
     }
-    imgsButsClearUp.push(selectedButton);
     counter = parseInt(counterNo);
     imgSCaseChange();
 }
