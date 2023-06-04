@@ -5,6 +5,72 @@
 body {
     margin: 0px;
     scroll-behavior: smooth;
+    /*animation: changeCursor 2s ease-in-out infinite; */
+    cursor: url("./ExtraImgs/red-cursor.png"), auto;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+   
+  /* Handle */
+::-webkit-scrollbar-thumb {
+    background: #ad5555; 
+  }
+  
+  /* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #bb2b2b; 
+  }
+
+@keyframes changeCursor {
+    0% {cursor: alias;}
+    3% {cursor: all-scroll;}
+    6% {cursor: cell;}
+    9% {cursor: col-resize;}
+    12% {cursor: context-menu;}
+    15% {cursor: copy;}
+    18% {cursor: crosshair;}
+    21% {cursor: url('./ExtraImgs/cursor-pointer.svg'), move;}
+    78% {cursor: url('./ExtraImgs/cursor-pointer.svg'), move;}
+    81% {cursor: se-resize;}
+    84% {cursor: sw-resize;}
+    87% {cursor: text;}
+    90% {cursor: vertical-text;}
+    93% {cursor: w-resize;}
+    96% {cursor: wait;}
+    98% {cursor: zoom-in;}
+    100% {cursor: zoom-out;}
+}
+.navBarTop {
+    display: none; /*Change to block*/
+    width: 100%;
+    height: 40px;
+    background-color: rgb(139, 139, 139);
+}
+
+.navBarMenu {
+    display: flex; 
+    width: 70%;
+    height: 100%;
+    border: 2px solid black;
+    margin: auto;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.navBarJumpButs {
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    color: rgb(240, 240, 240);
+    letter-spacing: 1px;
+
 }
 
 .header {
@@ -89,7 +155,7 @@ body {
 
 .regLink:hover {
     text-decoration: underline;
-    cursor: pointer;
+    cursor: url('./ExtraImgs/click-cursor.png'), auto;
 }
 
 .section {
@@ -124,17 +190,17 @@ h1, h2 {
 
 .regLinkSecEach:hover {
     text-decoration: underline;
-    cursor: pointer;
+    cursor: url('./ExtraImgs/click-cursor.png'), auto;
 }
 
 .imgSec {
     border: 0px solid rgb(209, 127, 127);
-    background-image: url('./ExtraImgs/CityBulidings.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: 0px 15px;
+    background-image: url('./ExtraImgs/buildings.png');
+    background-repeat: repeat-x;
+    background-size: contain;
+    background-position: 50% 0%;
     filter: saturate(200%) contrast(200%);
-    filter: drop-shadow(0px 0px 30px rgba(194, 199, 119, 0.438)); 
+    filter: drop-shadow(0px 0px 30px rgba(199, 119, 192, 0.438)); 
     height: 385px;
     width: 100%;
     margin: auto;
@@ -162,6 +228,11 @@ h1, h2 {
     flex-wrap: wrap;
 }
 
+.marginForESC {
+    margin-top: 50px;
+    color: black;
+}
+
 .eventsItems {
     flex-basis: 50%;
     background-color: rgb(255, 255, 255);
@@ -177,6 +248,7 @@ h1, h2 {
 .eventsItems:hover {
     color: rgb(27, 31, 56);
     background-color: rgb(228, 228, 228);
+    cursor: url('./ExtraImgs/click-cursor.png'), auto;
 }
 
 .theMerits {
@@ -200,8 +272,8 @@ h1, h2 {
 
 .MItem3 {
     background-image: url('./ExtraImgs/SpotifyLogo.jpg');
-    background-size: 70%;
-    background-position: -140px 150px;
+    background-size: 40%;
+    background-position: 8% 120%;
 }
 
 .MItem2 {
@@ -218,20 +290,20 @@ h1, h2 {
 
 .MItem4 {
     background-image: url('./ExtraImgs/GoogleLogo.jpg');
-    background-size: 60%;
-    background-position: -200px 130px;
+    background-size: 40%;
+    background-position: 25% 120%;
 }
 
 .MItem5 {
     background-image: url('./ExtraImgs/TwitterLogo.jpg');
-    background-size: 50%;
-    background-position: 0px 150px;
+    background-size: 40%;
+    background-position: 8% 120%;
 }
 
 .MItem6 {
     background-image: url('./ExtraImgs/ShareLogo.png');
     background-size: 50%;
-    background-position: 0px 50px;
+    background-position: 0% 300%;
 }
 
 
@@ -268,15 +340,63 @@ h1, h2 {
     clear: right;
 }
 
+.imgSCaseL:hover, .imgSCaseR:hover {
+    cursor: url('./ExtraImgs/click-cursor.png'), auto;
+    opacity: 0.7;
+}
+
 .aboutTab {
     width: 100%;
-    margin-top: 20px;
+    margin-top: -10px;
     float: left;
     display: block;
-    background-color: rgb(0, 0, 0);
-    height: 200px;
+    background-color: rgb(199, 199, 199);
+    height: 500px;
     font-family: Arial, Helvetica, sans-serif;
     overflow: hidden;  
+    padding: 20px;
+    letter-spacing: 2px;
+}
+
+.creditsSCase {
+    border: 0px solid black;
+    height: 120px;
+}
+
+.studentsOfBGS {
+    border: 0px solid black;
+    margin-top: 40px;
+    display: block;
+    height: 150px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.mainTitleBGSLogo {
+    flex-basis: 50%;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 15px;
+    color: rgb(39, 34, 46);
+    padding-left: 10%;
+    border: 0px solid rgb(250, 21, 21);
+}
+
+.BGSLogo {
+    border: 0px solid rgb(121, 209, 158);
+    flex-basis: 50%;
+    height: 150px;
+    background-image: url('./Imgs/BGScet-new-logo.png');
+    background-repeat: no-repeat;
+    background-position: 20% 50%;
+    filter: drop-shadow(0px 0px 5px rgba(34, 34, 34, 0.664));
+}
+
+.hTaglineAboutTab {
+    height: 30vw;
+    width: 30%;
+    color: rgb(37, 37, 37);
+    float: left; 
 }
 
 .imgSCaseButtons {
@@ -305,8 +425,18 @@ h1, h2 {
 }
 
 .circleButton:hover {
-    cursor: pointer;
+    cursor: url('./ExtraImgs/click-cursor.png'), auto;
     background-color: rgb(65, 23, 131);
+}
+.instaLinksAboutTab {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
+.instaLinksAboutTab:hover {
+    cursor: url('./ExtraImgs/click-cursor.png'), auto;
+    text-decoration: underline;
 }
 
 @media only screen and (max-width: 600px) {
@@ -315,37 +445,92 @@ h1, h2 {
     padding-top: 0px;
 }
 .regLinkSecEach {
+    color: #5aafff;
     margin-left: 10px;
     margin-right: 10px;
 }
+.regLinkSec {
+    color: #5aafff;
+}
+.regLink {
+    color: #5aafff;
+}
+
 .imgSec {
-    width:100%
+    width:100%;
+    background-position: 50% 50%;
+    background-size: cover;
+    
 }
 .eventsShowCase {
     width: 100%;
 }
 .meritsItems {
-    flex-basis: 96%;
+    flex-basis: 100%;
+    height: 100vw;
     margin-top: 15px;
+}
+.MItem4, .MItem5, .MItem3 {
+    background-size: 50%;
+    background-position: 0% 120%;
 }
 .buttonsClick {
     width: 50%;
 }
+.marginForESC {
+    margin-top: 0px;
+}
 
 .theMerits {
-    height: 3450px;
+    margin-top: 50px;
+    height: 2550px;
 }
 .eventsShowCase {
     width: 90%;
-    height: 840px;
+    height: 840px; 
+
 }
 .eventsItems {
-    flex-basis: 100%;
+    flex-basis: 96%;
+    height: 100px;
 }
 .sectionEvents {
     height: 1000px;
 }
 .eventsItems:nth-child(odd) {
     border-right: 0px solid rgb(155, 155, 155);
+}
+.aboutTab {
+    letter-spacing: 1px;
+    height: 700px;
+}
+.fontsizeCSC {
+    font-size: 25px;
+}
+.hTaglineAboutTab {
+    font-size: 15px;
+}
+.creditsSCase {
+    height: 140px;
+}
+.studentsOfBGS {
+    margin-top: 0px;
+    height: 200px;
+    flex-wrap: wrap;
+}
+.hTaglineAboutTab {
+    font-size: 13px;
+    line-height: 23px;
+}
+.mainTitleBGSLogo {
+ flex-basis: 100%;
+ padding-left: 0%;
+}
+
+.BGSLogo {
+    flex-basis: 100%;
+    background-position: center;
+    background-size: 90%;
+    height: 100px;
 }
 }
