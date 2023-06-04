@@ -1,0 +1,544 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    scroll-behavior: smooth;
+    /*animation: changeCursor 2s ease-in-out infinite; */
+    cursor: url("./ExtraImgs/red-cursor.png"), auto;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+   
+  /* Handle */
+::-webkit-scrollbar-thumb {
+    background: #ad5555; 
+  }
+  
+  /* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #bb2b2b; 
+  }
+
+@keyframes changeCursor {
+    0% {cursor: alias;}
+    3% {cursor: all-scroll;}
+    6% {cursor: cell;}
+    9% {cursor: col-resize;}
+    12% {cursor: context-menu;}
+    15% {cursor: copy;}
+    18% {cursor: crosshair;}
+    21% {cursor: url('./ExtraImgs/cursor-pointer.svg'), move;}
+    78% {cursor: url('./ExtraImgs/cursor-pointer.svg'), move;}
+    81% {cursor: se-resize;}
+    84% {cursor: sw-resize;}
+    87% {cursor: text;}
+    90% {cursor: vertical-text;}
+    93% {cursor: w-resize;}
+    96% {cursor: wait;}
+    98% {cursor: zoom-in;}
+    100% {cursor: zoom-out;}
+}
+.navBarTop {
+    display: block; /*Change to block*/
+    width: 100%;
+    height: 40px;
+    background-color: rgba(139, 139, 139, 0.678);
+    position: fixed;
+    z-index: 2;
+}
+
+.navBarMenu {
+    display: flex; 
+    width: 70%;
+    height: 100%;
+    border: 0px solid black;
+    margin: auto;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.navBarJumpButs {
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    color: rgb(240, 240, 240);
+    letter-spacing: 1px;
+
+}
+
+.navBarJumpButs:hover {
+    color: rgb(66, 66, 66);
+    font-weight: bold;
+    cursor: url('./ExtraImgs/click-cursor.png'), auto;
+}
+
+.header {
+    display: block;
+    background-color: rgba(0, 0, 0);
+    height: 540px;
+    padding-top: 5px;
+    
+}
+
+.logoPic {
+    background-image: url('./Imgs/BullLogo.webp');
+    background-repeat: no-repeat;
+    border: 0px solid rgb(209, 127, 127);
+    background-size: 130%;
+    background-position-x: center;
+    background-position-y: center;
+    filter: invert(100%);
+    height: 350px;
+    width: 350px;
+    margin: auto;
+}
+
+.logoPic:hover {
+    background-image: url('./Imgs/BullLogoGlow.webp');
+}
+
+.wobble:hover {
+    animation: wobble 1s ease-in-out;
+  }
+
+  @keyframes wobble {
+    0% { transform: translateX(0%); }
+    15% { transform: translateX(-3%) rotate(-3deg); }
+    30% { transform: translateX(3%) rotate(3deg); }
+    45% { transform: translateX(-3%) rotate(-3deg); }
+    60% { transform: translateX(3%) rotate(3deg); }
+    75% { transform: translateX(-3%) rotate(-3deg); }
+    100% { transform: translateX(0%); }
+  }
+
+.mainTitle {
+    text-align: center;
+    font-family:Arial, Helvetica, sans-serif;
+    letter-spacing: 5px;
+    color: aliceblue;
+    font-size: xx-large;
+    font-weight: bolder;
+    margin-top: -40px;
+}
+
+.bullDash {
+    display: inline-block;
+    position: relative;
+    top: 10px;
+    width: 70px;
+    height: 70px;
+    background-image: url('./Imgs/bullDasing.webp');
+    background-size: 170%;
+    background-position-x: center;
+    background-repeat: no-repeat;
+    border: 0px solid rgb(209, 127, 127);
+}
+
+.hTagline {
+    color: rgb(255, 255, 255);
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: lighter;
+    text-align: center;
+    letter-spacing: 5px;
+}
+
+.regLink {
+    display: block;
+    color: #2997ff;
+    text-align: center;
+    font-family: Arial;
+    letter-spacing: 3px;
+    font-weight: lighter;
+    text-decoration: none;
+}
+
+.regLink:hover {
+    text-decoration: underline;
+    cursor: url('./ExtraImgs/click-cursor.png'), auto;
+}
+
+.section {
+    margin-top: 20px;
+    display: block;
+    background-color: rgba(0, 0, 0);
+    height: 560px;
+    padding-top: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow: hidden;
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+.regLinkSec {
+    display: block;
+    color: #2997ff;
+    text-align: center;
+    font-family: Arial;
+    letter-spacing: 3px;
+    font-weight: lighter;
+}
+
+.regLinkSecEach {
+    color: #2997ff;
+    text-decoration: none;
+    margin-left: 70px;
+    margin-right: 70px;
+}
+
+.regLinkSecEach:hover {
+    text-decoration: underline;
+    cursor: url('./ExtraImgs/click-cursor.png'), auto;
+}
+
+.imgSec {
+    border: 0px solid rgb(209, 127, 127);
+    background-image: url('./ExtraImgs/buildings.png');
+    background-repeat: repeat-x;
+    background-size: contain;
+    background-position: 50% 0%;
+    filter: saturate(200%) contrast(200%);
+    filter: drop-shadow(0px 0px 30px rgba(199, 119, 192, 0.438)); 
+    height: 385px;
+    width: 100%;
+    margin: auto;
+    margin-top: 25px;
+}
+
+.sectionEvents {
+    margin-top: 20px;
+    display: block;
+    background-color: rgb(255, 255, 255);
+    height: 560px;
+    padding-top: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow: hidden;
+    color: black; 
+    margin-top: 0px;
+}
+
+.eventsShowCase {
+    display: flex;
+    border: 0px solid rgb(209, 127, 127);
+    height: 420px;
+    width: 1250px;
+    margin: auto;
+    flex-wrap: wrap;
+}
+
+.marginForESC {
+    margin-top: 50px;
+    color: black;
+}
+
+.eventsItems {
+    flex-basis: 50%;
+    background-color: rgb(255, 255, 255);
+    border-bottom: 2px solid rgb(158, 158, 158);
+    height: 140px;
+    color: rgb(0, 0, 0);
+}
+
+.eventsItems:nth-child(odd) {
+    border-right: 2px solid rgb(155, 155, 155);
+}
+
+.eventsItems:hover {
+    color: rgb(27, 31, 56);
+    background-color: rgb(228, 228, 228);
+    cursor: url('./ExtraImgs/click-cursor.png'), auto;
+}
+
+.theMerits {
+    margin-top: 20px;
+    display: flex;
+    background-color: rgb(255, 255, 255);
+    height: 1770px;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow: hidden;  
+    padding: 15px 0px;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.meritsItems {
+    flex-basis: 48%;
+    border: 0px solid black;
+    height: 560px;
+    background-attachment: fixed;
+}
+
+.MItem3 {
+    background-image: url('./ExtraImgs/SpotifyLogo.jpg');
+    background-size: 40%;
+    background-position: 8% 120%;
+}
+
+.MItem2 {
+    background-image: url('./ExtraImgs/WhatsappLogo.jpeg');
+    background-size: 50%;
+    background-position: 0px 40px;
+}
+
+.MItem1 {
+    background-image: url('./ExtraImgs/InstagramLogo.jpeg');
+    background-size: 50%;
+    background-position: 0px 40px;
+}
+
+.MItem4 {
+    background-image: url('./ExtraImgs/GoogleLogo.jpg');
+    background-size: 40%;
+    background-position: 25% 120%;
+}
+
+.MItem5 {
+    background-image: url('./ExtraImgs/TwitterLogo.jpg');
+    background-size: 40%;
+    background-position: 8% 120%;
+}
+
+.MItem6 {
+    background-image: url('./ExtraImgs/ShareLogo.png');
+    background-size: 50%;
+    background-position: 0% 300%;
+}
+
+
+.imageShowCase {
+    margin-top: 20px;
+    display: block; /*Change this to block*/
+    background-color: rgb(219, 216, 175);
+    height: 550px;
+    font-family: Arial, Helvetica, sans-serif;
+    scroll-behavior: smooth; 
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.imgSCasePlace {
+    display: block;
+    float: left;
+    height: 550px;
+    border: 1px solid black;
+}
+
+.imgSCaseM {
+    width: 66%;
+}
+
+.imgSCaseL {
+    margin-right: 1%;
+    width: 16%;
+}
+
+.imgSCaseR {
+    width: 16%;
+    margin-left: 1%;
+    clear: right;
+}
+
+.imgSCaseL:hover, .imgSCaseR:hover {
+    cursor: url('./ExtraImgs/click-cursor.png'), auto;
+    opacity: 0.7;
+}
+
+.aboutTab {
+    width: 100%;
+    margin-top: -10px;
+    float: left;
+    display: block;
+    background-color: rgb(199, 199, 199);
+    height: 500px;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow: hidden;  
+    padding: 20px;
+    letter-spacing: 2px;
+}
+
+.creditsSCase {
+    border: 0px solid black;
+    height: 120px;
+}
+
+.studentsOfBGS {
+    border: 0px solid black;
+    margin-top: 40px;
+    display: block;
+    height: 150px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.mainTitleBGSLogo {
+    flex-basis: 50%;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 15px;
+    color: rgb(39, 34, 46);
+    padding-left: 10%;
+    border: 0px solid rgb(250, 21, 21);
+}
+
+.BGSLogo {
+    border: 0px solid rgb(121, 209, 158);
+    flex-basis: 50%;
+    height: 150px;
+    background-image: url('./Imgs/BGScet-new-logo.png');
+    background-repeat: no-repeat;
+    background-position: 20% 50%;
+    filter: drop-shadow(0px 0px 5px rgba(34, 34, 34, 0.664));
+}
+
+.hTaglineAboutTab {
+    height: 30vw;
+    width: 30%;
+    color: rgb(37, 37, 37);
+    float: left; 
+}
+
+.imgSCaseButtons {
+    display: block; /*Change this to block*/
+    height: 50px;
+    background-color: rgb(156, 133, 133);
+}
+
+.buttonsClick {
+    height: 50px;
+    display: flex;
+    width: 25%;
+    margin: auto;
+    background-color: rgb(110, 163, 108);
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.circleButton {
+    height: 15px;
+    width: 15px;
+    border-radius: 15px;
+    background-color: rgb(122, 66, 212);
+    border: 0px;
+    display: block;
+}
+
+.circleButton:hover {
+    cursor: url('./ExtraImgs/click-cursor.png'), auto;
+    background-color: rgb(65, 23, 131);
+}
+.instaLinksAboutTab {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
+.instaLinksAboutTab:hover {
+    cursor: url('./ExtraImgs/click-cursor.png'), auto;
+    text-decoration: underline;
+}
+
+@media only screen and (max-width: 600px) {
+    
+.header {
+    padding-top: 0px;
+}
+.regLinkSecEach {
+    color: #5aafff;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.regLinkSec {
+    color: #5aafff;
+}
+.regLink {
+    color: #5aafff;
+}
+
+.imgSec {
+    width:100%;
+    background-position: 50% 50%;
+    background-size: cover;
+    
+}
+.eventsShowCase {
+    width: 100%;
+}
+.meritsItems {
+    flex-basis: 100%;
+    height: 100vw;
+    margin-top: 15px;
+}
+.MItem4, .MItem5, .MItem3 {
+    background-size: 50%;
+    background-position: 0% 120%;
+}
+.buttonsClick {
+    width: 50%;
+}
+.marginForESC {
+    margin-top: 0px;
+}
+
+.theMerits {
+    margin-top: 50px;
+    height: 2550px;
+}
+.eventsShowCase {
+    width: 90%;
+    height: 840px; 
+
+}
+.eventsItems {
+    flex-basis: 96%;
+    height: 100px;
+}
+.sectionEvents {
+    height: 1000px;
+}
+.eventsItems:nth-child(odd) {
+    border-right: 0px solid rgb(155, 155, 155);
+}
+.aboutTab {
+    letter-spacing: 1px;
+    height: 700px;
+}
+.fontsizeCSC {
+    font-size: 25px;
+}
+.hTaglineAboutTab {
+    font-size: 15px;
+}
+.creditsSCase {
+    height: 140px;
+}
+.studentsOfBGS {
+    margin-top: 0px;
+    height: 200px;
+    flex-wrap: wrap;
+}
+.hTaglineAboutTab {
+    font-size: 13px;
+    line-height: 23px;
+}
+.mainTitleBGSLogo {
+ flex-basis: 100%;
+ padding-left: 0%;
+}
+
+.BGSLogo {
+    flex-basis: 100%;
+    background-position: center;
+    background-size: 90%;
+    height: 100px;
+}
+}
