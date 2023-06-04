@@ -4,6 +4,7 @@
 
 body {
     margin: 0px;
+    scroll-behavior: smooth;
 }
 
 .header {
@@ -115,6 +116,7 @@ h1, h2 {
 }
 
 .regLinkSecEach {
+    color: #2997ff;
     text-decoration: none;
     margin-left: 70px;
     margin-right: 70px;
@@ -126,9 +128,15 @@ h1, h2 {
 }
 
 .imgSec {
-    border: 1px solid rgb(209, 127, 127);
-    height: 365px;
-    width: 1050px;
+    border: 0px solid rgb(209, 127, 127);
+    background-image: url('./ExtraImgs/CityBulidings.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0px 15px;
+    filter: saturate(200%) contrast(200%);
+    filter: drop-shadow(0px 0px 30px rgba(194, 199, 119, 0.438)); 
+    height: 385px;
+    width: 100%;
     margin: auto;
     margin-top: 25px;
 }
@@ -147,7 +155,7 @@ h1, h2 {
 
 .eventsShowCase {
     display: flex;
-    border: 1px solid rgb(209, 127, 127);
+    border: 0px solid rgb(209, 127, 127);
     height: 420px;
     width: 1250px;
     margin: auto;
@@ -156,21 +164,25 @@ h1, h2 {
 
 .eventsItems {
     flex-basis: 50%;
-    background-color: darkslategray;
-    border: 1px solid rgb(4, 252, 99);
+    background-color: rgb(255, 255, 255);
+    border-bottom: 2px solid rgb(158, 158, 158);
     height: 140px;
-    color: antiquewhite;
+    color: rgb(0, 0, 0);
+}
+
+.eventsItems:nth-child(odd) {
+    border-right: 2px solid rgb(155, 155, 155);
 }
 
 .eventsItems:hover {
     color: rgb(27, 31, 56);
-    background-color: rgb(143, 197, 197);
+    background-color: rgb(228, 228, 228);
 }
 
 .theMerits {
     margin-top: 20px;
     display: flex;
-    background-color: rgb(219, 219, 219);
+    background-color: rgb(255, 255, 255);
     height: 1770px;
     font-family: Arial, Helvetica, sans-serif;
     overflow: hidden;  
@@ -181,19 +193,51 @@ h1, h2 {
 
 .meritsItems {
     flex-basis: 48%;
-    border: 1px solid black;
+    border: 0px solid black;
     height: 560px;
+    background-attachment: fixed;
 }
 
-.meritsItems::after {
-    color: black;
-    content: "{imagePlace}";
+.MItem3 {
+    background-image: url('./ExtraImgs/SpotifyLogo.jpg');
+    background-size: 70%;
+    background-position: -140px 150px;
+}
+
+.MItem2 {
+    background-image: url('./ExtraImgs/WhatsappLogo.jpeg');
+    background-size: 50%;
+    background-position: 0px 40px;
+}
+
+.MItem1 {
+    background-image: url('./ExtraImgs/InstagramLogo.jpeg');
+    background-size: 50%;
+    background-position: 0px 40px;
+}
+
+.MItem4 {
+    background-image: url('./ExtraImgs/GoogleLogo.jpg');
+    background-size: 60%;
+    background-position: -200px 130px;
+}
+
+.MItem5 {
+    background-image: url('./ExtraImgs/TwitterLogo.jpg');
+    background-size: 50%;
+    background-position: 0px 150px;
+}
+
+.MItem6 {
+    background-image: url('./ExtraImgs/ShareLogo.png');
+    background-size: 50%;
+    background-position: 0px 50px;
 }
 
 
 .imageShowCase {
     margin-top: 20px;
-    display: block;
+    display: none; /*Change this to block*/
     background-color: rgb(219, 216, 175);
     height: 550px;
     font-family: Arial, Helvetica, sans-serif;
@@ -236,7 +280,7 @@ h1, h2 {
 }
 
 .imgSCaseButtons {
-    display: block;
+    display: none; /*Change this to block*/
     height: 50px;
     background-color: rgb(156, 133, 133);
 }
@@ -289,7 +333,7 @@ h1, h2 {
 }
 
 .theMerits {
-    height: 1750px;
+    height: 3450px;
 }
 .eventsShowCase {
     width: 90%;
@@ -301,5 +345,7 @@ h1, h2 {
 .sectionEvents {
     height: 1000px;
 }
-
+.eventsItems:nth-child(odd) {
+    border-right: 0px solid rgb(155, 155, 155);
+}
 }
