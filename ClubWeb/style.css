@@ -5,8 +5,12 @@
 body {
     margin: 0px;
     scroll-behavior: smooth;
-    /*animation: changeCursor 2s ease-in-out infinite; */
+    /* animation: changeCursor 7s ease-in-out infinite; */
     cursor: url("./ExtraImgs/red-cursor.png"), auto;
+}
+
+a:hover {
+    cursor: url("./ExtraImgs/click-cursor.png"), auto;
 }
 
 ::-webkit-scrollbar {
@@ -20,45 +24,48 @@ body {
    
   /* Handle */
 ::-webkit-scrollbar-thumb {
-    background: #ad5555; 
+    background: #c56565; 
   }
   
   /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-    background: #bb2b2b; 
+    background: #93da8d; 
   }
 
-@keyframes changeCursor {
+/* @keyframes changeCursor {
     0% {cursor: alias;}
-    3% {cursor: all-scroll;}
-    6% {cursor: cell;}
-    9% {cursor: col-resize;}
-    12% {cursor: context-menu;}
-    15% {cursor: copy;}
-    18% {cursor: crosshair;}
-    21% {cursor: url('./ExtraImgs/cursor-pointer.svg'), move;}
-    78% {cursor: url('./ExtraImgs/cursor-pointer.svg'), move;}
-    81% {cursor: se-resize;}
-    84% {cursor: sw-resize;}
-    87% {cursor: text;}
-    90% {cursor: vertical-text;}
-    93% {cursor: w-resize;}
-    96% {cursor: wait;}
-    98% {cursor: zoom-in;}
+    1% {cursor: all-scroll;}
+    2% {cursor: cell;}
+    3% {cursor: col-resize;}
+    4% {cursor: context-menu;}
+    5% {cursor: copy;}
+    6% {cursor: crosshair;}
+    7% {cursor: url('./ExtraImgs/red-cursor.png'), move;}
+    92% {cursor: url('./ExtraImgs/red-cursor.png'), move;}
+    93% {cursor: se-resize;}
+    94% {cursor: sw-resize;}
+    95% {cursor: text;}
+    96% {cursor: vertical-text;}
+    97% {cursor: w-resize;}
+    98% {cursor: wait;}
+    99% {cursor: zoom-in;}
     100% {cursor: zoom-out;}
-}
+} */
+
 .navBarTop {
-    display: none; /*Change to block*/
+    display: block; /*Change to block*/
     width: 100%;
     height: 40px;
-    background-color: rgb(139, 139, 139);
+    background-color: rgba(165, 165, 165, 0.904);
+    position: fixed;
+    z-index: 2;
 }
 
 .navBarMenu {
     display: flex; 
     width: 70%;
     height: 100%;
-    border: 2px solid black;
+    border: 0px solid black;
     margin: auto;
     justify-content: space-around;
     align-items: center;
@@ -71,6 +78,12 @@ body {
     color: rgb(240, 240, 240);
     letter-spacing: 1px;
 
+}
+
+.navBarJumpButs:hover {
+    cursor: url('./ExtraImgs/click-cursor.png'), auto;
+    color: rgb(12, 12, 12);
+    font-weight: bold;
 }
 
 .header {
@@ -88,7 +101,7 @@ body {
     background-size: 130%;
     background-position-x: center;
     background-position-y: center;
-    filter: invert(100%);
+    filter: drop-shadow(0px 0px 5px rgba(252, 0, 0, 0.363));
     height: 350px;
     width: 350px;
     margin: auto;
@@ -96,6 +109,7 @@ body {
 
 .logoPic:hover {
     background-image: url('./Imgs/BullLogoGlow.webp');
+    filter: drop-shadow(0px 0px 5px rgba(0, 252, 42, 0.226));
 }
 
 .wobble:hover {
@@ -154,8 +168,8 @@ body {
 }
 
 .regLink:hover {
-    text-decoration: underline;
     cursor: url('./ExtraImgs/click-cursor.png'), auto;
+    text-decoration: underline;
 }
 
 .section {
@@ -189,8 +203,8 @@ h1, h2 {
 }
 
 .regLinkSecEach:hover {
-    text-decoration: underline;
     cursor: url('./ExtraImgs/click-cursor.png'), auto;
+    text-decoration: underline;
 }
 
 .imgSec {
@@ -246,9 +260,9 @@ h1, h2 {
 }
 
 .eventsItems:hover {
+    cursor: url('./ExtraImgs/click-cursor.png'), auto;
     color: rgb(27, 31, 56);
     background-color: rgb(228, 228, 228);
-    cursor: url('./ExtraImgs/click-cursor.png'), auto;
 }
 
 .theMerits {
@@ -309,7 +323,7 @@ h1, h2 {
 
 .imageShowCase {
     margin-top: 20px;
-    display: none; /*Change this to block*/
+    display: block; /*Change this to block*/
     background-color: rgb(219, 216, 175);
     height: 550px;
     font-family: Arial, Helvetica, sans-serif;
@@ -375,11 +389,18 @@ h1, h2 {
 
 .mainTitleBGSLogo {
     flex-basis: 50%;
-    font-family: Arial, Helvetica, sans-serif;
-    letter-spacing: 15px;
-    color: rgb(39, 34, 46);
+    font-family: 'PT Sans Narrow', sans-serif;
+    font-weight: bolder;
+    letter-spacing: 10px;
+    font-size: 440%;
+    color: rgb(70, 50, 75);
     padding-left: 10%;
     border: 0px solid rgb(250, 21, 21);
+    filter: drop-shadow(0px 0px 5px rgba(34, 34, 34, 0.219));
+}
+
+.mainTitleBGSLogo:hover {
+    text-shadow: 0px 0px 10px rgba(34, 34, 34, 0.432);
 }
 
 .BGSLogo {
@@ -389,18 +410,23 @@ h1, h2 {
     background-image: url('./Imgs/BGScet-new-logo.png');
     background-repeat: no-repeat;
     background-position: 20% 50%;
+    filter: drop-shadow(0px 0px 2px rgba(34, 34, 34, 0.507));
+}
+
+.BGSLogo:hover {
     filter: drop-shadow(0px 0px 5px rgba(34, 34, 34, 0.664));
 }
 
 .hTaglineAboutTab {
     height: 30vw;
-    width: 30%;
+    width: 70%;
     color: rgb(37, 37, 37);
     float: left; 
+    text-align: left;
 }
 
 .imgSCaseButtons {
-    display: none; /*Change this to block*/
+    display: block; /*Change this to block*/
     height: 50px;
     background-color: rgb(156, 133, 133);
 }
@@ -429,7 +455,7 @@ h1, h2 {
     background-color: rgb(65, 23, 131);
 }
 .instaLinksAboutTab {
-    display: block;
+    display: inline-block;
     text-decoration: none;
     color: inherit;
 }
@@ -437,6 +463,35 @@ h1, h2 {
 .instaLinksAboutTab:hover {
     cursor: url('./ExtraImgs/click-cursor.png'), auto;
     text-decoration: underline;
+}
+
+@media only screen and (max-width: 600px) {
+    .navBarMenu {
+        width: 100%;
+    } 
+    .navBarTop {
+        height: 30px;
+    }
+    .navBarJumpButs {
+        font-size: 3.5vw;
+    }
+    .navBarMenu > .mainTitle {
+        font-size: 5vw;
+    }
+    .header > .hTagline {
+        font-size: 5vw;
+    }
+    .mainTitleBGSLogo {
+        font-size: 10vw;
+        margin-bottom: 0px;
+    }
+    .hTaglineAboutTab {
+        width: 85%;
+    }
+    .BGSLogo {
+        margin-top: 0px;
+    }
+
 }
 
 @media only screen and (max-width: 600px) {
@@ -523,8 +578,8 @@ h1, h2 {
     line-height: 23px;
 }
 .mainTitleBGSLogo {
- flex-basis: 100%;
- padding-left: 0%;
+    flex-basis: 100%;
+    padding-left: 0%;
 }
 
 .BGSLogo {
