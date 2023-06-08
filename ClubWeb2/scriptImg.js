@@ -108,3 +108,41 @@ function imgButtonChange(selectedButton) {
     imgSCaseChange();
 }
 
+const animateElements = document.querySelectorAll('.noAnimation');
+const animateTextElementsL = document.querySelectorAll('.noAnimatTextL');
+const animateTextElementsR = document.querySelectorAll('.noAnimatTextR');
+
+const observerer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('yesAnimation');
+        }
+        else {
+            entry.target.classList.remove('yesAnimation');
+        }
+
+    });
+})
+
+const textObserverer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        console.log(entry.target.className);
+        console.log(entry.isIntersecting);
+        if (entry.isIntersecting && entry.target.className == "eventsItems noAnimatTextL") {
+            entry.target.classList.add('yesAnimatTextL');
+        }
+        else if (entry.target.className == "eventsItems noAnimatTextL yesAnimatTextL" && entry.isIntersecting==false) {
+            entry.target.classList.remove('yesAnimatTextL');
+        }
+        else if (entry.isIntersecting && entry.target.className == "eventsItems noAnimatTextR") {
+            entry.target.classList.add('yesAnimatTextR');
+        }
+        else if (entry.target.className == "eventsItems noAnimatTextR yesAnimatTextR" && entry.isIntersecting==false) {
+            entry.target.classList.remove('yesAnimatTextR');
+        }
+    });
+})
+
+animateTextElementsR.forEach((element) => textObserverer.observe(element));
+animateTextElementsL.forEach((element) => textObserverer.observe(element));
+animateElements.forEach((element) => observerer.observe(element));

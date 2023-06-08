@@ -52,6 +52,27 @@ a:hover {
     100% {cursor: zoom-out;}
 } */
 
+.navIconHome::after {
+    content: "Home";
+}
+
+.navIconReg::after {
+    content: "Register";
+}
+.navIconEve::after {
+    content: "Events";
+}
+.navIconAct::after {
+    content: "Activites";
+}
+.navIconRev::after {
+    content: "Review";
+}
+.navIconAU::after {
+    content: "About Us";
+}
+
+
 .navBarTop {
     display: block; /*Change to block*/
     width: 100%;
@@ -362,6 +383,7 @@ h1, h2 {
 .aboutTab {
     width: 100%;
     margin-top: -10px;
+    overflow: hidden;
     float: left;
     display: block;
     background-color: rgb(199, 199, 199);
@@ -464,14 +486,164 @@ h1, h2 {
     cursor: url('./ExtraImgs/click-cursor.png'), auto;
     text-decoration: underline;
 }
+.noAnimation {
+    filter: brightness(0);
+    animation: none;
+}
+.yesAnimation {
+    animation: bluranimation 1s ease-in;
+    filter: brightness(1);
+}
+
+@keyframes bluranimation {
+    0% {filter: brightness(0);}
+    100% {filter: brightness(1);}
+    
+}
+
+.noAnimatTextL {
+    position: relative;
+    right: -150px;
+    animation: none; 
+    opacity: 0;
+}
+
+.yesAnimatTextL {
+    animation: animatetextL 0.4s ease-out;
+    position: relative;
+    right: 0px;
+    opacity: 1;
+}
+
+@keyframes animatetextL {
+    0% {right: -150px;opacity: 0;}
+    100% {right: 0px;opacity: 1;}
+}
+
+.noAnimatTextR {
+    position: relative;
+    left: -150px;
+    opacity: 0;
+    animation: none; 
+}
+
+.yesAnimatTextR {
+    animation: animatetextR 0.4s ease-out;
+    position: relative;
+    left: 0px;
+    opacity: 1;
+}
+
+@keyframes animatetextR {
+    0% {left: -150px; opacity: 0;}
+    100% {left: 0px; opacity: 1;}
+}
 
 @media only screen and (max-width: 600px) {
     .navBarMenu {
         width: 100%;
     } 
     .navBarTop {
-        height: 30px;
+        height: 50px;
     }
+    /*.navIconHome {
+        height: 100%;
+        background-image: url(./Icons/home.png);
+        background-size: 80%;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    .navIconHome:hover {
+        background-image: url(./Icons/home-clicked.png);
+    } */
+    .navIconHome::after {
+        content: "";
+    }
+    .navIconReg::after {
+        content: "";
+    }
+    .navIconEve::after {
+        content: "";
+    }
+    .navIconAct::after {
+        content: "";
+    }
+    .navIconRev::after {
+        content: "";
+    }
+    .navIconAU::after {
+        content: "";
+    }
+
+    .navBarMenu {
+        background-color: rgba(255, 255, 255, 0.541);
+    }
+
+    .navIconHome {
+        background-image: url('./Icons/home.png');
+        background-size: 40%;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    .navIconHome:hover {
+        background-image: url('./Icons/home-clicked.png');
+    }
+
+    .navIconReg {
+        background-image: url('./Icons/edit-click.png');
+        background-size: 45%;
+        background-repeat: no-repeat;
+        background-position: 50% 55%;
+    }
+    .navIconReg:hover {
+        background-image: url('./Icons/edit.png');
+    }
+
+    .navIconEve {
+        background-image: url('./Icons/event.png');
+        background-size: 40%;
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+    }
+    .navIconEve:hover {
+        background-image: url('./Icons/event-click.png');
+    }
+
+    .navIconAct {
+        background-image: url('./Icons/idea.png');
+        background-size: 45%;
+        background-repeat: no-repeat;
+        background-position: 50% 40%;
+    }
+    .navIconAct:hover {
+        background-image: url('./Icons/idea-click.png');
+    }
+
+    .navIconRev {
+        background-image: url('./Icons/rating.png');
+        background-size: 45%;
+        background-repeat: no-repeat;
+        background-position: 50% 40%;
+    }
+    .navIconRev:hover {
+        background-image: url('./Icons/rating-click.png');
+    }
+
+    .navIconAU {
+        background-image: url('./Icons/group.png');
+        background-size: 45%;
+        background-repeat: no-repeat;
+        background-position: 50% 40%;
+    }
+    .navIconAU:hover {
+        background-image: url('./Icons/group-click.png');
+    }
+
+    .navBarJumpButs {
+        height: 100%;
+        flex-basis: 16.66%;
+    }
+
     .navBarJumpButs {
         font-size: 3.5vw;
     }
