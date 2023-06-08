@@ -6,11 +6,13 @@ body {
     margin: 0px;
     scroll-behavior: smooth;
     /* animation: changeCursor 7s ease-in-out infinite; */
-    cursor: url("./ExtraImgs/red-cursor.png"), auto;
+    /*cursor: url("./ExtraImgs/red-cursor.png"), auto; */
+    cursor: auto !important;
 }
 
 a:hover {
-    cursor: url("./ExtraImgs/click-cursor.png"), auto;
+    /*cursor: url("./ExtraImgs/click-cursor.png"), aut0; */
+    cursor: pointer !important;
 }
 
 ::-webkit-scrollbar {
@@ -24,12 +26,12 @@ a:hover {
    
   /* Handle */
 ::-webkit-scrollbar-thumb {
-    background: #c56565; 
+    background: #a0a0a0; 
   }
   
   /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-    background: #93da8d; 
+    background: #838383; 
   }
 
 /* @keyframes changeCursor {
