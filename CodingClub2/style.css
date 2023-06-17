@@ -9,6 +9,21 @@ body {
     cursor: url("./ExtraImgs/red-cursor.png"), auto;
 }
 
+body::after {
+    position: absolute;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    z-index: -1;
+    content: url(./Imgs/BullLogoGlow.webp) url('./Imgs/BullLogo.webp') 
+    url('./Icons/group-click.png') url('./Icons/group.png') 
+    url('./Icons/rating-click.png') url('./Icons/rating.png')
+    url('./Icons/idea-click.png') url('./Icons/idea.png') 
+    url('./Icons/event-click.png') url('./Icons/event.png') 
+    url('./Icons/edit.png') url('./Icons/edit-click.png') 
+    url('./Icons/home-clicked.png') url('./Icons/home.png');
+}
+
 a:hover {
     cursor: url("./ExtraImgs/click-cursor.png"), auto;
 }
@@ -116,7 +131,6 @@ a:hover {
 }
 
 .logoPic {
-    background-image: url('./Imgs/BullLogoGlow.webp');
     background-image: url('./Imgs/BullLogo.webp');
     background-repeat: no-repeat;
     border: 0px solid rgb(209, 127, 127);
@@ -132,7 +146,6 @@ a:hover {
 .logoPic:hover {
     background-image: url('./Imgs/BullLogoGlow.webp');
     filter: drop-shadow(0px 0px 5px rgba(0, 252, 42, 0.226));
-    
 }
 
 .wobble:hover {
@@ -582,7 +595,6 @@ h1, h2 {
     }
 
     .navIconHome {
-        background-image: url('./Icons/home-clicked.png');
         background-image: url('./Icons/home.png');
         background-size: 40%;
         background-repeat: no-repeat;
@@ -591,9 +603,8 @@ h1, h2 {
     .navIconHome:hover {
         background-image: url('./Icons/home-clicked.png');
     }
-
+    
     .navIconReg {
-        background-image: url('./Icons/edit.png');
         background-image: url('./Icons/edit-click.png');
         background-size: 45%;
         background-repeat: no-repeat;
@@ -604,7 +615,6 @@ h1, h2 {
     }
 
     .navIconEve {
-        background-image: url('./Icons/event-click.png');
         background-image: url('./Icons/event.png');
         background-size: 40%;
         background-repeat: no-repeat;
@@ -615,7 +625,6 @@ h1, h2 {
     }
 
     .navIconAct {
-        background-image: url('./Icons/idea-click.png');
         background-image: url('./Icons/idea.png');
         background-size: 45%;
         background-repeat: no-repeat;
@@ -626,7 +635,6 @@ h1, h2 {
     }
 
     .navIconRev {
-        background-image: url('./Icons/rating-click.png');
         background-image: url('./Icons/rating.png');
         background-size: 45%;
         background-repeat: no-repeat;
@@ -637,7 +645,6 @@ h1, h2 {
     }
 
     .navIconAU {
-        background-image: url('./Icons/group-click.png');
         background-image: url('./Icons/group.png');
         background-size: 45%;
         background-repeat: no-repeat;
@@ -646,6 +653,7 @@ h1, h2 {
     .navIconAU:hover {
         background-image: url('./Icons/group-click.png');
     }
+    
 
     .navBarJumpButs {
         height: 100%;

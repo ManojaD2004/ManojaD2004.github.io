@@ -4,6 +4,8 @@ const imgSCaseR = document.getElementById("imgSCaseR");
 const imgSCButs = document.getElementById("imgSCButtons");
 const imgsButsClearUp= [];
 
+
+
 let imgButton = "";
 let groupButton = "";
 
