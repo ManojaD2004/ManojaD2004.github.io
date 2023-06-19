@@ -1,0 +1,108 @@
+* {
+    box-sizing: border-box;  
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.NavTopRight {
+    height: 60px;
+    border-right: 0.5px solid rgb(58, 58, 58);
+    background-color: rgb(32, 44, 51);
+    
+}
+.NavTopLeft {
+    height: 60px;
+    border-left: 0.5px solid rgb(59, 59, 59);
+    background-color: rgb(110, 54, 117);
+    /*Change this bg color*/
+}
+
+.ContactArea {
+    height: calc(100vh - 60px);
+    background-color: rgb(83, 40, 40);
+    overflow-y: scroll;
+}
+
+.ContactArea::-webkit-scrollbar {
+    width: 0;
+}
+
+.MessageArea {
+    height: calc(100vh - 60px);
+    background-color: rgb(139, 115, 146);
+}
+
+.LeftPanel {
+    background-color: rgb(84, 84, 141);
+    width: 500px;
+    left: 0;
+    position: fixed;
+    height: 100vh;
+}
+
+.RightPanel {
+    right: 0;
+    position: fixed;
+    height: 100vh;
+    width: calc(100% - 500px);
+}
+
+.DpImg {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    height: 40px;
+    background-image: url('https://www.whatsappimages.in/wp-content/uploads/2022/04/Super-Dog-Images-Pics-Download.jpeg');
+    background-size: cover;
+    width: 40px;
+    border-radius: 25px;
+}
+
+.NavTopRightEle {
+    height: 60px;
+    width: 50%;
+    position: absolute;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.ElementsNTR {
+    border: 0px solid black;
+    width: 25px;
+    height: 25px;
+    filter: invert(70%);
+    transition: 0.5s ease-in-out;
+}
+
+.ElementsNTR:hover {
+    cursor: pointer;
+    filter: invert(85%);
+}
+
+.People {
+    background-image: url('./Icons/people.png');
+    background-size: cover;
+}
+
+.Status {
+    background-image: url('./Icons/status.png');
+    background-size: cover;
+
+}
+
+.Message {
+    background-image: url('./Icons/comment.png');
+    background-size: cover;
+
+}
+
+.ThreeDots {
+    background-image: url('./Icons/dots.png');
+    background-size: cover;
+
+}
