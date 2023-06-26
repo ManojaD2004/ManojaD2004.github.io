@@ -1,0 +1,6 @@
+.TextColor {
+    color: red;
+    background-color: yellow;
+    height: 200px;
+    border: 50px solid red;
+}

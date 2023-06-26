@@ -1,0 +1,72 @@
+/*Comment in CSS*/
+/*Anything*/
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    padding: 0px;
+    margin: 0px;
+    
+}
+
+.LeftPanel {
+    width: 400px;
+    height: 100vh;
+    color: white;
+    background-color: rgb(24, 34, 41);
+}
+
+.ProfilePanel {
+    height: 60px;
+    width: 100%;
+    background-color: rgb(50, 63, 71);
+    position: relative;
+}
+
+.ImageDP {
+    background-image: url('./Imgs/myDp.jpg');
+    background-size: cover;
+    height: 40px;
+    width: 40px;
+    border-radius: 30px;
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    
+}
+
+.IconsPlace {
+    background-color: red;
+    height: 60px;
+    width: 240px;
+    position: absolute;
+    top:0px;
+    right: 10px;
+}
+
+.Icons {
+    border: 1px solid green;
+    width: 60px;
+    height: 60px;
+    float: left;
+}
+
+.PeopleIcon {
+    background-image: url('./Icons/people.png');
+    background-size: contain;
+}
+.StatusIcon {
+    background-image: url('./Icons/status.png');
+    background-size: contain;
+}
+.MessageIcon {
+    background-image: url('./Icons/comment.png');
+    background-size: contain;
+
+}
+.ThreeDotsIcon {
+    background-image: url('./Icons/dots.png');
+    background-size: contain;
+}
