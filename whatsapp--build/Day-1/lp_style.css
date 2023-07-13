@@ -1,0 +1,78 @@
+.lp {
+    flex-basis: 440px;
+    background-color: blueviolet;
+    display: flex;
+    flex-direction: column;
+}
+
+.lp_header {
+    flex-basis: 75px;
+    background-color: #f0f2f5;
+    display: flex;
+    padding-left: 15px;
+    padding-right: 15px;
+    align-items: center;
+    justify-content: space-between;
+}
+.profile_dp {
+    border-radius: 25px;
+    height: 45px;
+    width: 45px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.lp_icons {
+    flex-basis: 250px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.lp_icon {
+    height: 25px;
+    width: 25px;
+    filter: invert(30%);
+    transition: all 0.1s ease-in-out;
+}
+
+.lp_icon:hover {
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+}
+
+.srh_input_field {
+    flex-basis: 60px;
+    background-color: violet;
+    position: relative;
+}
+
+.input_text {
+    position: absolute;
+    display: block;
+    height: 70%;
+    background-color: rgb(203, 203, 203);
+    outline: 0;
+    border: 0;
+    border-radius: 15px;
+    width: 80%;
+    top: 15%;
+    left: 10px;
+    padding-left: 60px;
+}
+
+.srh_icon {
+    display: block;
+    position: absolute;
+    z-index: 2;
+    left: 20px;
+    top: 17px;
+    height: 25px;
+    width: 25px;
+    filter: invert(20%);
+}
+
+
+

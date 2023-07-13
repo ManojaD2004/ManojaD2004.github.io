@@ -1,0 +1,15 @@
+Reference {To know what certain things in the code does, go to this reference page and search what you want!} =>
+1. HTML Reference - https://www.w3schools.com/tags/
+-> HTML Examples - https://www.w3schools.com/html/html_examples.asp
+2. CSS Reference - https://www.w3schools.com/cssref/index.php
+-> CSS Examples - https://www.w3schools.com/css/css_examples.asp
+3. JS Reference - https://www.w3schools.com/jsref/default.asp
+-> JS Examples - https://www.w3schools.com/js/js_examples.asp
+
+==> Reference used by the whole world, used by all the developers -->
+https://developer.mozilla.org/en-US/ {not recommended, bcz it doesn't have a good UI}
+
+TO Learn HTML, CSS, JS here are the websites:
+1. HTML - https://www.w3schools.com/html/default.asp {do till HTML Graphics}
+2. CSS - https://www.w3schools.com/css/default.asp {do till CSS Grid}
+3. JS - https://www.w3schools.com/js/default.asp {do till JS HTML DOM}
