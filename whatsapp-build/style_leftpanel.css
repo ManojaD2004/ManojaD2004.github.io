@@ -15,7 +15,7 @@
     padding-right: 15px;
 }
 
-.lp_profile_dp {
+.lp_profile_dp, .rp_cont_dp {
     height: 45px;
     border-radius: 25px;
     margin-top: 5px;
