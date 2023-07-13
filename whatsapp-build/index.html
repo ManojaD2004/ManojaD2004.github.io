@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style_leftpanel.css" />
+  <link rel="stylesheet" href="./style_rightpanel.css" />
+  <link rel="stylesheet" href="./style.css" />
+  <link rel="icon" type="image/x-icon" href="./Favicon/favicon.png">
+  <title>WhatsApp</title>
+  <script defer src="./db.js"></script>
+  <script defer src="./script.js"></script>
+</head>
+<body>
+  <div class="root_container">
+    <div class="left_panel">
+      <div class="lp_header">
+        <img class="lp_profile_dp" src="./Images/profile_dp.jpg" alt="" />
+        <div class="lp_header_icons">
+          <img class="lp_icon" src="https://img.icons8.com/material/100/conference-call--v2.png" alt="conference-call--v2" alt="" />
+          <img class="lp_icon" src="https://img.icons8.com/ios-filled/100/loading.png" alt="" />
+          <img class="lp_icon" src="https://img.icons8.com/material/100/filled-speech-bubble-with-dots.png" alt="" />
+          <img class="lp_icon" src="https://img.icons8.com/ios-glyphs/100/menu-2.png" alt="" />          
+        </div>
+      </div>
+      <div class="lp_input_field">
+        <img class="lp_search_icon" 
+        src="https://img.icons8.com/ios-filled/100/search--v1.png" alt="" />
+        <input placeholder="Search or start a new chat" type="text" 
+        class="lp_srh_input" onchange="srh_by_query(this)"
+         onpaste= "this.onchange()"
+        oninput="this.onchange()"/>
+        <img class="lp_filter_icon" 
+        src="https://img.icons8.com/material/100/horizontal-settings-mixer--v1.png" alt="" />
+      </div>
+      <div id="lp_contact_lists" class="lp_hero_section">
+      </div>
+      
+    </div>
+
+    <div class="right_panel">
+      <div class="right_panel_header">
+        <img id="rp_header_img" class="rp_cont_dp"
+        src="./Images/contact_dp_images/cont_dp_mark.jpg" alt="" />
+        <h3 id="rp_header_cont_name"></h3>
+        <div class="rp_icon_place_holder">
+          <img src="https://img.icons8.com/ios-filled/100/search--v1.png" 
+          class="rp_header_icon" alt="" />
+          <img src="https://img.icons8.com/ios-glyphs/100/menu-2.png" 
+          class="rp_header_icon" alt="" />
+        </div>
+      </div>
+      <div class="right_panel_hero_section">
+        <div class="rp_msg_design rp_msg_you">
+          Hello
+        </div>
+        <div class="rp_msg_design rp_msg_cont">
+          Hello WhatsApp
+        </div>
+      </div>
+      <div class="right_panel_message_input">
+        <img class="rp_msg_icon" 
+        src="https://img.icons8.com/material/100/plus-math--v2.png" alt="" />
+        <input class="rp_text_input" placeholder="Type a message" 
+        type="text" />
+        <img class="rp_msg_icon" 
+        src="https://img.icons8.com/material-outlined/100/happy--v1.png" alt="" />
+        <img class="rp_msg_icon" 
+        src="https://img.icons8.com/material-rounded/100/microphone.png" alt="" />
+      </div>
+      
+    </div>
+  </div>
+    
+</body>
+</html>
