@@ -13,7 +13,7 @@ let pre_ele;
 
 function darken_color(e)  {
     e.style.backgroundColor = 'rgb(233, 233, 233)';
-    if (pre_ele) {
+    if (pre_ele && pre_ele!==e) {
         pre_ele.style.backgroundColor = '';
     }
     pre_ele = e;
