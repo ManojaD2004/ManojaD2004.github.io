@@ -6,16 +6,36 @@
   <link rel="stylesheet" href="./style_leftpanel.css" />
   <link rel="stylesheet" href="./style_rightpanel.css" />
   <link rel="stylesheet" href="./style.css" />
+  <link rel="stylesheet" href="./style_cont_details.css" />
   <link rel="icon" type="image/x-icon" href="./Favicon/favicon.png">
   <title>WhatsApp</title>
   <script defer src="./db.js"></script>
   <script defer src="./script.js"></script>
+  <!--Specific Meta Data-->
 </head>
 <body>
+
   <div class="root_container">
+    
+    <div id="show_cont_details" class="show_cont_details" 
+    onclick="close_display(this)">
+      <div id="show_cd_data" class="show_cd_data">
+        <img class="show_cd_data_img" 
+        src="./Images/contact_dp_images/cont_dp_mark.jpg" />
+        <h2>Mark Zuck</h2>
+        <img class="show_cd_data_symbol"
+        src="https://img.icons8.com/material/100/multiply--v1.png" />
+      </div>
+      <div class="show_cd_img_container">
+        <img id="show_cd_img" class="show_cd_img"
+        src="./Images/contact_dp_images/cont_dp_mark.jpg" />
+      </div>
+    </div>
+
     <div class="left_panel">
       <div class="lp_header">
-        <img class="lp_profile_dp" src="./Images/profile_dp.jpg" alt="" />
+        <img onclick="display_cont(this, true)" class="lp_profile_dp" 
+        src="./Images/profile_dp.jpg" alt="" />
         <div class="lp_header_icons">
           <img class="lp_icon" src="https://img.icons8.com/material/100/conference-call--v2.png" alt="" />
           <img class="lp_icon" src="https://img.icons8.com/ios-filled/100/loading.png" alt="" />
@@ -27,10 +47,10 @@
         <img class="lp_search_icon" 
         src="https://img.icons8.com/ios-filled/100/search--v1.png" alt="" />
         <input id="srh_input" placeholder="Search or start a new chat" 
-        type="text" class="lp_srh_input" onchange="srh_by_query(this)"
-        onpaste= "this.onchange()" oninput="this.onchange()" 
-        onkeypress="this.onchange()"/>
-        <img onclick="ascend_cont_list()" class="lp_filter_icon" 
+        type="text" class="lp_srh_input"
+        onpaste= "srh_by_query(this)" oninput="srh_by_query(this)"/>
+        <img title="Ascending / Descending" 
+        onclick="ascend_cont_list()" class="lp_filter_icon" 
         src="https://img.icons8.com/material/100/horizontal-settings-mixer--v1.png" alt="" />
       </div>
       <div id="lp_contact_lists" class="lp_hero_section">
@@ -40,8 +60,9 @@
 
     <div class="right_panel">
       <div class="right_panel_header">
-        <img id="rp_header_img" class="rp_cont_dp"
-        src="./Images/contact_dp_images/cont_dp_mark.jpg" alt="" />
+        <img id="rp_header_img" class="rp_cont_dp" 
+        onclick="display_cont(this)" alt=""
+        src="./Images/contact_dp_images/cont_dp_mark.jpg" />
         <h3 id="rp_header_cont_name"></h3>
         <div class="rp_icon_place_holder">
           <img src="https://img.icons8.com/ios-filled/100/search--v1.png" 
@@ -67,6 +88,7 @@
       </div>
       
     </div>
+
   </div>
     
 </body>

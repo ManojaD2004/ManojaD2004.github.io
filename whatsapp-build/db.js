@@ -21,8 +21,8 @@ const recent_msg = ['Zuck: How is Threads','AI Bro!','Beast: Daddy Elon',
 const cont_msg = {"Mark Zuck": ["Copy Cat!", "$NO", "$How is Threads"], 
 "Sam Altman": ["$We need funding", "$For next model of AI","Done 👍",
 "AI Bro!"],
-"Mr Beast": ["$Big Fan Elon","Appreciate it","Daddy Elon"],
-"Amber Heard": ["$Can you help me?","No"],
+"Mr Beast": ["$Big Fan Elon","Appreciate it","$Daddy Elon"],
+"Amber Heard": ["$Hey","Hey","$Can you help me?"],
 "Mukesh Ambani": ["$Oil","Rockets","..."],
 "Amazon Bezos": ["$You can never beat me!","Jeff Who!?"],
 "President Biden": ["$I am the President, and you should respect me!", 
@@ -35,5 +35,6 @@ const cont_msg = {"Mark Zuck": ["Copy Cat!", "$NO", "$How is Threads"],
 "Be Brand Ambasidor of our products"],
 "Papa Trump": ["$You are a great guy","My pleasure",
 "$Keep going Up","$And I love Rockets"],
-"Group": ["Group Message Functionality coming soon!!"]
+"Group": ["Group Message Functionality coming soon!!", 
+"You can't message here for now ❌"]
 }; 
