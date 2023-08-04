@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+    <!-- All the best -->
+    <!-- Your code goes here -->
+    <div class="nav-albs-cont">
+        <h3>Recommended albums</h3>
+        <div id="nav-albs" class="nav-albs">
+            <div class="one-alb">
+                <div class="one-alb-img">
+                    <img class="img" src="https://lh3.googleusercontent.com/zMEIYn8d1PaMRfWALe0tFAZsR6HqntGr-bxwaa7l2o-t_lApRz-D4FC2UxN761FtAtVyMcrIinXoPFE=w544-h544-l90-rj" />
+                    <img class="icon1" src="https://img.icons8.com/ios-filled/100/menu-2.png" />
+                    <img class="icon2" src="https://img.icons8.com/ios-glyphs/100/play--v1.png" />
+                </div>
+                <div class="text">
+                    <h3>Spider-Man: Across the Spider-Verse</h3>
+                    <p>Albums.<span>Daniel Pembbertin</span></p>
+                </div>
+            </div>   
+        </div>
+    </div>
+    
+    <script>
+        // To create Duplicates
+        let content = "";
+        for (let index = 0; index < 20; index++) {
+            content = content + document.getElementById('nav-albs').innerHTML;
+        }
+        document.getElementById('nav-albs').innerHTML = content;
+    </script>
+    
+</body>
+</html>

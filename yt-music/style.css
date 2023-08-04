@@ -1,0 +1,182 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: black;
+}
+
+h1 {
+  margin: 0;
+  font-size: 22px;
+}
+
+h2 {
+  margin: 0;
+  font-size: 20px;
+}
+
+h3 {
+  margin: 0;
+  font-size: 18px;
+}
+
+h4 {
+  margin: 0;
+  font-size: 16px;
+}
+
+h5 {
+  margin: 0;
+  font-size: 14px;
+}
+
+h6 {
+  margin: 0;
+  font-size: 12px;
+}
+
+code {
+  font-size: 1.2em;
+}
+
+ul {
+  padding-left: 20px;
+}
+
+/* Your style goes here. */
+
+.nav-albs-cont {
+  width: 80%;
+  height: 280px;
+  margin: auto;
+  margin-top: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.nav-albs-cont > h3 {
+  color: white;
+  font-size: 30px;
+}
+
+.nav-albs {
+  height: 230px;
+  width: 100%;
+  display: flex;
+  gap: 21px;
+  overflow-x: scroll;
+  scroll-behavior: smooth;
+  overflow-y: hidden;
+}
+
+.nav-albs::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+.one-alb {
+  height: 100%;
+  width: 160px;
+ flex: none;
+}
+
+.one-alb-img {
+  width: 100%;
+  height: 160px;
+  position: relative;
+}
+
+.one-alb-img > img {
+  position: absolute;
+}
+
+.one-alb-img .img {
+  height: 160px;
+  z-index: -2;
+}
+.one-alb-img:hover .img{
+  cursor: pointer;
+}
+.one-alb-img:hover {
+  box-shadow: 0px 57px 15px rgba(0, 0, 0, 0.212) inset;
+}
+.one-alb-img:hover > .icon1, .one-alb-img:hover > .icon2{
+  display: inline;
+}
+
+.icon1 {
+  display: none;
+  transform: translate(50%, -50%);
+  top: 13%;
+  right: 13%;
+  filter: invert(100%);
+  height: 15px;
+  transition: all;
+  border: 8px solid rgba(208, 204, 208, 0);
+  border-radius: 20px;
+  box-sizing: content-box;
+  background-color: rgba(55, 55, 55, 0);
+}
+
+.icon2 {
+  display: none;
+  z-index: 2;
+  transform: translate(50%, 50%);
+  bottom: 22%;
+  right: 22%;
+  filter: invert(100%);
+  height: 17px;
+  transition: all 0.1s ease-in;
+  box-sizing: content-box;
+  border-radius: 20px;
+  border: 10px solid rgba(208, 204, 208, 0);
+  background-color: rgba(212, 207, 207, 0.861);
+}
+
+.icon2:hover {
+  height: 20px;
+  border: 12px solid rgba(208, 204, 208, 0);
+  cursor: pointer;
+}
+
+.icon1:hover {
+  box-sizing: content-box;
+  border: 8px solid rgba(208, 204, 208, 0);
+  border-radius: 20px;
+  background-color: rgba(0, 0, 0, 0.208);
+  cursor: pointer;
+}
+
+.text {
+  height: 70px;
+  width: 100%;
+}
+.text > h3 {
+  color: white;
+  font-size: 14px;
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+.text > h3:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.text > p {
+  color: gray;
+  margin-top: 0;
+  font-size: 13px;
+  margin-bottom: 0;
+}
+.text > p > span:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+
+
