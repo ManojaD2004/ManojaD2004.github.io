@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS</title>
+    <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+    <input id="number1" type="text" />
+    <input id="number2" type="text" />
+    <h1>Answer: </h1>
+    <h1 id="answer">null</h1>
+
+    <br/>
+    <br/>
+    <br/>
+
+    <button onclick="add()">+</button>
+    <button>-</button>
+    <button>X</button>
+    <button>/</button>
+
+    <br/>
+    <br/>
+    <br/>
+
+    <button onclick="answer()"> = </button>
+
+    <script>
+        let number1 = document.getElementById('number1');
+        let number2 = document.getElementById('number2');
+        let answerEle = document.getElementById('answer');
+        let result = '';
+
+        function add() {
+            console.log(number1.value, number2.value);
+            result = parseInt(number1.value) + parseInt(number2.value);
+        }
+        function answer() {
+            answerEle.innerHTML = result;
+        }
+        // add the remaining functions, with styles
+    </script>
+</body>
+</html>

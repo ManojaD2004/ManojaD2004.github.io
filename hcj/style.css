@@ -1,0 +1,20 @@
+.root {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    width: 600px;
+    gap: 20px;
+}
+.tweet {
+    background-color: rgb(207, 207, 207);
+    height: 100px;
+    padding-left: 20px;
+}
+.input_fields {
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+input {
+    margin-left: 25px;
+    margin-right: 25px;
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Counter</title>
+  </head>
+  <body>
+    <h1 id="counter">0</h1>
+    <button onclick="incre()">Increment</button>
+    <button onclick="decre()">Decrement</button>
+    <button onclick="save()">Save</button>
+    <input id="jumpNo" value="1" type="text" />
+    <h1 id="savedNumbers">null</h1>
+    <!-- Add styles -->
+
+    <script>
+      let counterEle = document.getElementById("counter");
+      let savedEle = document.getElementById("savedNumbers");
+      let jumpNoEle = document.getElementById("jumpNo");
+      let clearTimeOut = null;
+
+      let numberList = [];
+
+      function render(jumpNo) {
+        return new Promise(function (resolve) {
+          clearTimeOut = setTimeout(function () {
+            counterEle.innerHTML = parseInt(counterEle.innerHTML) + jumpNo;
+          }, 1000);
+        });
+      }
+
+      async function incre() {
+        let jumpNo = parseInt(jumpNoEle.value);
+        if (clearTimeOut) {
+          clearTimeout(clearTimeOut);
+        }
+        await render(jumpNo);
+      }
+
+      function decre() {
+        let jumpNo = parseInt(jumpNoEle.value);
+        counterEle.innerHTML = parseInt(counterEle.innerHTML) - jumpNo;
+      }
+
+      function save() {
+        numberList.push(counterEle.innerHTML);
+        savedEle.innerHTML = numberList;
+      }
+    </script>
+  </body>
+</html>
