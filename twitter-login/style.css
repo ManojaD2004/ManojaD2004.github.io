@@ -1,0 +1,169 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  margin-top: 0;
+  background-color: rgb(48, 50, 58);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.popUp {
+  height: 100vh;
+  width: 100%;
+  background-color: rgba(51, 51, 51, 0.753);
+  margin: 0;
+  z-index: 999;
+  position: fixed;
+  display: none;
+  /* By Default */
+  top: 0;
+}
+.popUp > h1 {
+  color: rgb(0, 0, 0);
+  position: absolute;
+  margin: 0;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  background-color: white;
+  box-sizing: content-box;
+  padding: 50px;
+  border-radius: 30px;
+  left: 50%;
+}
+
+.login {
+  overflow-y: scroll;
+  margin: auto;
+  margin-top: 15px;
+  height: 550px;
+  width: 610px;
+  background-color: black;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.login > * {
+  flex-shrink: 0;
+}
+
+.lg-icons {
+  height: 60px;
+  width: 100%;
+  position: relative;
+
+}
+
+.lg-icons > img {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
+  height: 33px;
+  filter: invert(100%);
+
+}
+
+.lg-icons > p {
+  color: white;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 5%;
+  top: 50%;
+  margin: 0;
+}
+
+.lg-twitter {
+  height: 65px;
+  width: 50%;
+  margin-top: 5px;
+  display: flex;
+  align-items: center;
+}
+
+.lg-twitter > h3 {
+  margin: 0;
+  font-size: medium;
+  color: rgb(227, 227, 227);
+  font-family: sans-serif;
+  font-size: 30px;
+}
+.lg-options {
+  width: 50%;
+  height: 42px;
+  background-color: white;
+  border-radius: 23px;
+  margin-top: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lg-options > h3 {
+  color: black;
+  font-weight: 500;
+  margin: 0;
+  font-size: 16px;
+  margin-left:7px;
+}
+
+.lg-options > img {
+  height: 22px;
+}
+
+.lg-or {
+  height: 60px;
+  width: 50%;
+  position: relative;
+}
+
+.lg-or > div {
+  height: 2px; 
+  width: 100%;
+  background-color: rgb(66, 66, 66);
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
+}
+
+.lg-or > h4 {
+  margin: 0;
+  margin-top: 5px;
+  color: rgb(197, 197, 197);
+  background-color: rgb(0, 0, 0);
+  height: 30px;
+  width: 30px;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
+  text-align: center;
+}
+
+.input {
+  height: 65px;
+  width: 50%;
+  
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.input > input {
+  width: 100%;
+  border: 0;
+  outline: 0;
+  background-color: black;
+  border: 2px solid rgb(38, 38, 38);
+  color: white;
+  font-family: Helvetica, sans-serif;
+  height: 60px;
+  border-radius: 5px;
+  font-size: medium;
+  padding-left: 15px;
+}

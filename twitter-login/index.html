@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script defer src="./script.js"></script>
+</head>
+<body>
+    <!-- All the best -->
+    <!-- Your code goes here -->
+    <div onclick="closePopUP()" id="popUp" class="popUp">
+        <h1>Google Login</h1>
+    </div>
+    </div>
+    <div class="login">
+        <div class="lg-icons">
+            <img src="https://th.bing.com/th/id/OIF.BQCrbY0JuQzfRbnGeCCaVw?pid=ImgDet&rs=1" alt="" />
+            <p>X</p>
+        </div>
+        <div class="lg-twitter">
+            <h3>Sign in to Twitter</h3>
+        </div>
+        <div onclick="signInWith('Google')" style="cursor: pointer;" class="lg-options">
+            <img src="https://img.icons8.com/color/100/google-logo.png" alt="" />
+            <h3>Sign in with Google</h3>
+        </div>
+        <div onclick="signInWith('Apple')" style="cursor: pointer;" class="lg-options">
+            <img src="https://img.icons8.com/ios-filled/100/mac-os.png" alt="" />
+            <h3 style="font-weight: 700;">Sign in with Apple</h3>
+        </div>
+        <div class="lg-or">
+            <div></div>
+            <h4>or</h4>
+        </div>
+        <div class="input">
+            <input id="username" placeholder="Phone, email, or username" 
+            type="text" />
+        </div>
+        <div class="input">
+            <input id="password" placeholder="Password" 
+            type="text" />
+        </div>
+        <div onclick="verifUser()" style="cursor: pointer;" class="lg-options">
+            <h3 style="font-weight: 700; margin-left: 0;">Next</h3>
+        </div>
+        <div onclick="forgetPass()" class="lg-options" style="background-color: black; border: 2px solid rgb(56, 56, 56); cursor: pointer;">
+            <h3 style="font-weight: 700; margin-left: 0; color: rgb(220, 220, 220);"
+            >Forget Password</h3>
+        </div>
+    </div>
+    
+</body>
+</html>
