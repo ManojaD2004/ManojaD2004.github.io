@@ -7,7 +7,8 @@ Projects:
 (Note: Most of these projects are mini, they don't have all the features, they just have some main features.) 
 
 1. Insta Clone : https://insta-2-0-built.vercel.app 
-/n => Technologies used: ReactJS, NextJs, Firebase, Recoil state manager, TailwindCSS.
+
+=> Technologies used: ReactJS, NextJs, Firebase, Recoil state manager, TailwindCSS.
 
 2. WhatsApp Front-End : https://manojad2004.github.io/whatsapp-build/
 
