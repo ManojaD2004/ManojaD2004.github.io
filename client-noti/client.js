@@ -4,14 +4,14 @@ const PUB_KEYS =
 // Register SW, Reg Push, Send Push
 async function send() {
   // Registering SW
-  console.log("Registering Service Worker...");
+  console.log("Registering Service Worker lol...");
   const register = await navigator.serviceWorker.register("./ws.js", {
-    scope: "/client-noti",
+    scope: "./client-noti",
   });
   console.log("Registered Service Worker...");
 
   //   Register Push
-  console.log("Regesitering Push...");
+  console.log("Registering Push...");
   const subscription = await register.pushManager.subscribe({
     userVisibleOnly: true,
     applicationServerKey: PUB_KEYS,
