@@ -6,7 +6,7 @@ async function send() {
   // Registering SW
   console.log("Registering Service Worker...");
   const register = await navigator.serviceWorker.register("./ws.js", {
-    scope: "/",
+    scope: "/client-noti",
   });
   console.log("Registered Service Worker...");
 
