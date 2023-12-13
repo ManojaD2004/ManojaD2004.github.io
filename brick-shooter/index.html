@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Brick Breaker Game</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/generateBricks.js" defer></script>
+    <script src="js/powerUp.js" defer></script>
+    <script src="js/movePadBall.js" defer></script>
+    <script src="js/integrate.js" defer></script>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/glitch.css" />
+    <script defer>
+      // Get the modal
+      var modal = document.getElementById("startModal");
+      var modal2 = document.getElementById("endModal");
+      var modal3 = document.getElementById("nextModal");
+      var modals1 = document.getElementById("M1");
+      var modals5 = document.getElementById("M5");
+
+      // When the user clicks anywhere outside of the modal, close it
+      window.onclick = function (event) {
+        if (event.target === modal) {
+          modal.style.display = "none";
+        }
+        if (event.target === modal2) {
+          modal2.style.display = "none";
+        }
+        if (event.target === modal3) {
+          modal3.style.display = "none";
+        }
+      };
+
+      //audio-DO-NOT-REMOVE
+      let x = document.createElement("audio");
+      x.src = "audio/blue.mp3";
+      x.setAttribute("loop", "loop");
+      document.body.addEventListener("mousemove", function () {
+        x.play();
+      });
+
+      function bricktouch() {
+        let x = document.createElement("audio");
+        x.src = "audio/bricktouch.wav";
+        x.play();
+      }
+
+      function gameover() {
+        let x = document.createElement("audio");
+        x.src = "audio/gameover.wav";
+        x.play();
+      }
+
+      function jump() {
+        let x = document.createElement("audio");
+        x.src = "audio/jump.wav";
+        x.play();
+      }
+
+      function brickbroken() {
+        let x = document.createElement("audio");
+        x.src = "audio/brickbroken.wav";
+        x.play();
+      }
+    </script>
+  </head>
+  <body>
+    <div id="startModal" class="modal active">
+      <!-- Modal content -->
+      <div class="modal-content modal-c1">
+        <div class="titlediv">
+          <h1 class="title glitch" data-glitch="Brick Breaker">
+            Brick Breaker
+          </h1>
+        </div>
+        <div class="startbtn">
+          <h1 class="play-text">Play</h1>
+          <h1 class="game-text">Game</h1>
+        </div>
+      </div>
+    </div>
+    <div id="M1" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content modal-s">
+        <div class="storycenter">
+          <div class="story-img img1"></div>
+          <div class="story-text">Hi, I am Glob.</div>
+        </div>
+        <div class="nextcard"></div>
+      </div>
+    </div>
+    <div id="M5" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content modal-s">
+        <div class="storycenter">
+          <div class="story-img img5"></div>
+          <div class="story-text">I need you to find my gems</div>
+        </div>
+        <div class="nextcard"></div>
+      </div>
+    </div>
+
+    <div id="endModal" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content modal-c2">
+        <div class="modal-body">
+          <div class="playagain"></div>
+        </div>
+      </div>
+    </div>
+    <div id="nextModal" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content modal-c3">
+        <div class="stars">
+          <div class="s1 star"></div>
+          <div class="s2 star"></div>
+          <div class="s3 star"></div>
+        </div>
+        <div class="modal-body">
+          <div class="home"></div>
+          <div class="next"></div>
+          <div class="restart"></div>
+        </div>
+        <div class="restart"></div>
+      </div>
+    </div>
+    <div class="main-container">
+      <div class="brick-container"></div>
+      <div id="ball" class="animateball"></div>
+      <div id="pad">
+        <div class="leftpad">
+          <!--            <button id="myBtn">-->
+          <!--                start-->
+          <!--            </button>-->
+        </div>
+        <!--        <button id="nextBtn">-->
+        <!--            next-->
+        <!--        </button>-->
+        <div class="rightpad">
+          <!--            <button id="yourBtn">-->
+          <!--                end-->
+          <!--            </button>-->
+        </div>
+      </div>
+    </div>
+    <div class="score-container">
+      <div class="lives">Lives: <span id="lives">2</span></div>
+      <div class="score">Score: <span id="score">10000</span></div>
+    </div>
+    <div id="pop-up-left" class="pop-up-left">
+      <div
+        id="pop-show-close"
+        class="pop-show-close"
+        onclick="open_pop()"
+      ></div>
+      <div onclick="HandleAI()" class="ai-button">AI Play</div>
+      <div class="ai-desc" id="ai-desc">AI is Not Playing</div>
+    </div>
+  </body>
+</html>
