@@ -13,7 +13,7 @@ struct Day week[7];
 // Function to create the calendar
 void create()
 {
-  for (int i = 0; i < 7; i++)
+  for (int i = 0; i < 2; i++)
   {
     week[i].name = (char *)malloc(20 * sizeof(char));
     week[i].activity = (char *)malloc(100 * sizeof(char));
@@ -36,7 +36,7 @@ void read()
 void display()
 {
   printf("\nDay\tDate\tActivity\n");
-  for (int i = 0; i < 7; i++)
+  for (int i = 0; i < 2; i++)
   {
     printf("%s\t%d\t%s", week[i].name, week[i].date, week[i].activity);
   }
